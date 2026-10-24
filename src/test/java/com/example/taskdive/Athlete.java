@@ -44,6 +44,16 @@ public class Athlete {
     @JsonProperty("Gender")
     private int Gender;
 
+    public void OutputAthlete()
+    {
+        String sex = (Gender == 0) ? "Male" : "Female";
+        CountryName = (CountryName == null) ? CountryMap.get(CountryCode) : CountryName;
+        System.out.println("Full Name: " + PreferredFirstName + " " + PreferredLastName);
+        System.out.println("Gender: " + sex);
+        System.out.println("Country: " + CountryName);
+        System.out.println("----");
+    }
+
 
     public Athlete(){}
     public String getCountryName() { return CountryName; }

@@ -67,7 +67,8 @@ public class SingleSearch {
 
         for(Disciplines disciplines : Discipline)                   //打印数据
         {
-            System.out.println(disciplines);
+//            System.out.println(disciplines);
+            disciplines.OutputDisciplines();
         }
     }
 }

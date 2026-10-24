@@ -61,7 +61,8 @@ public class GroupSearch {
             }
         }
         for(Disciplines disciplines : Discipline){
-            System.out.println(disciplines);
+//            System.out.println(disciplines);
+            disciplines.OutputDisciplines();
         }
     }
 }
