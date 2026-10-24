@@ -13,15 +13,6 @@ public class Disciplines {
 
     private List<Phase> Phases;
 
-    public void OutputDisciplines()
-    {
-        System.out.println("------------DisciplineName: " + DisciplineName + "------------");
-        for(Phase phase: Phases)
-        {
-            phase.OutputPhase();
-        }
-    }
-
     public Disciplines(){}
     public Disciplines(String DisciplineName){
         this.DisciplineName = DisciplineName;

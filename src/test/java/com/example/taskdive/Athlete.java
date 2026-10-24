@@ -7,7 +7,7 @@ import com.fasterxml.jackson.annotation.JsonAlias;            // 不同文件对
 // 运动员属性方法
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Athlete {
-    private static Map<String,String> CountryMap = Map.ofEntries(
+    public static Map<String,String> CountryMap = Map.ofEntries(
             Map.entry("COL", "Colombia"),
             Map.entry("MEX", "Mexico"),
             Map.entry("USA", "United States of America"),
@@ -41,19 +41,10 @@ public class Athlete {
     @JsonAlias("FirstName")
     private String PreferredFirstName;
 
+    private String FullName = PreferredFirstName + " " + CountryName;
+
     @JsonProperty("Gender")
     private int Gender;
-
-    public void OutputAthlete()
-    {
-        String sex = (Gender == 0) ? "Male" : "Female";
-        CountryName = (CountryName == null) ? CountryMap.get(CountryCode) : CountryName;
-        System.out.println("Full Name: " + PreferredFirstName + " " + PreferredLastName);
-        System.out.println("Gender: " + sex);
-        System.out.println("Country: " + CountryName);
-        System.out.println("----");
-    }
-
 
     public Athlete(){}
     public String getCountryName() { return CountryName; }
@@ -71,12 +62,16 @@ public class Athlete {
     public int getGender() { return Gender; }
     public void setGender(int gender) { this.Gender = gender; }
 
+    public String getFullName() { return FullName; }
+    public void setFullName(String fullName) { this.FullName = fullName; }
+
+
 
     @Override
     public String toString() {
         String sex = (Gender == 0) ? "Male" : "Female";
         CountryName = (CountryName == null) ? CountryMap.get(CountryCode) : CountryName;
-        return "Full Name:" + PreferredFirstName + " " + PreferredLastName +
+        return "Full Name:" + PreferredLastName + " " + PreferredFirstName +
                 "\nGender:" + sex + "\nCountry:" + CountryName + "\nCountryCode:" + CountryCode + "\n-----\n";
     }
 }

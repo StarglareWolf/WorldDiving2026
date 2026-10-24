@@ -20,15 +20,6 @@ public class Phase {
 
     private List<RankPoint> RankPoint;
 
-    public void OutputPhase()
-    {
-        System.out.println("Phase: " + PhaseName);
-        for(RankPoint point: RankPoint)
-        {
-            point.OutputRankPoint();
-        }
-    }
-
     public Phase(){}
     public Phase(String PhaseName, String HeatName){
         this.PhaseName = PhaseName;

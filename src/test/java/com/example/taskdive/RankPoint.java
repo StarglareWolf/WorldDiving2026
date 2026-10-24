@@ -18,27 +18,6 @@ public class RankPoint {
 
     private List<Athlete> Athletes;
 
-    public void OutputRankPoint()
-    {
-        System.out.println("Rank: " + DiveRank);
-        for(Athlete athlete: Athletes)
-        {
-            athlete.OutputAthlete();
-        }
-        System.out.print("DivePoints: ");
-        int total = DivePoints.size();
-        for(int i = 0;i < total; i++)
-        {
-            System.out.print(DivePoints.get(i));
-            if(i != total - 1)
-                System.out.print(" + ");
-            else
-                System.out.print(" = ");
-        }
-        System.out.println(TotalPoints);
-        System.out.println("###########");
-    }
-
     public RankPoint(){}
     public RankPoint(String DiveRank, String TotalPoints, List<String> DivePoints, List<Athlete> Athletes){
         this.DiveRank = DiveRank;
