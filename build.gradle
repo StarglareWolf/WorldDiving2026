@@ -19,6 +19,7 @@ repositories {
 }
 
 dependencies {
+    implementation 'org.apache.commons:commons-text:1.10.0' // 依赖：猜你想搜
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
     implementation 'com.alibaba:fastjson:1.2.83'
     implementation 'org.springframework.boot:spring-boot-starter'

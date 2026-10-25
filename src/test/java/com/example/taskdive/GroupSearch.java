@@ -17,6 +17,8 @@ public class GroupSearch {
 
         Scanner inputs = new Scanner(System.in);
         String SearchName = inputs.nextLine();
+        SearchName = SearchName.toLowerCase();
+        SearchName = ProjectMatcher.matchDiscipline(SearchName);
 
       for(File file : new File("Athlete&Contest/Contest/Group").listFiles())
         {
