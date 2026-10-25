@@ -9,7 +9,7 @@ public class Event {
     public Event(){
         this.EventName = "World Aquatics Diving World Cup 2026 - Super Final - Stop 1(Beijing)";
     }
-    public List<Country>Countries = new ArrayList<Country>();
+    public List<Country>Countries = new ArrayList<>();
 
     public Event(String EventName){
         this.EventName = EventName;

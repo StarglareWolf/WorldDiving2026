@@ -22,6 +22,10 @@ public class OutputClass {
         }
         System.out.print("DivePoints: ");
         int total = rankPoint.getDivePoints().size();
+        if(rankPoint.getCarryOverPoints() != null)
+        {
+            System.out.print(rankPoint.getCarryOverPoints() + " + ");
+        }
         for(int i = 0;i < total; i++)
         {
             System.out.print(rankPoint.getDivePoints().get(i));

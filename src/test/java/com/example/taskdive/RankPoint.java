@@ -10,6 +10,9 @@ public class RankPoint {
     @JsonProperty("TotalPoints")
     private String TotalPoints;
 
+    @JsonProperty("CarryOverPoints")
+    private String CarryOverPoints;
+
     @JsonProperty("Rank")
     @JsonAlias("DiveRank")
     private String DiveRank;
@@ -55,6 +58,14 @@ public class RankPoint {
 
     public void setAthletes(List<Athlete> athletes) {
         Athletes = athletes;
+    }
+
+    public String getCarryOverPoints() {
+        return CarryOverPoints;
+    }
+
+    public void setCarryOverPoints(String carryOverPoints) {
+        CarryOverPoints = carryOverPoints;
     }
 
     public void addDivePoint(String divepoint)

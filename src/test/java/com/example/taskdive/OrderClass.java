@@ -1,14 +1,11 @@
 package com.example.taskdive;
 
-import org.jetbrains.annotations.Contract;
-import org.jspecify.annotations.NonNull;
 
 import java.util.List;
 
 // 排序类
 public class OrderClass {
-   @org.jetbrains.annotations.Contract("_ -> param1")
-   public static @NonNull List<Country> CountryOrder(List<Country> countries) {
+   public static  List<Country> CountryOrder(List<Country> countries) {
         int total = countries.size();
         for (int i = 0; i < total; i++) {
             for (int j = i + 1; j < total; j++) {
@@ -22,8 +19,7 @@ public class OrderClass {
         return countries;
     }
 
-    @Contract("_ -> param1")
-    public static @NonNull List<Athlete> AthleteOrder(List<Athlete> athletes)
+    public static List<Athlete> AthleteOrder(List<Athlete> athletes)
     {
         int total = athletes.size();
         for (int i = 0; i < total; i++) {

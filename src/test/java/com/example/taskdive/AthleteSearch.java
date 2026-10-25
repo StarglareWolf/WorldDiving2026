@@ -16,6 +16,8 @@ public class AthleteSearch {
                 }
         ));
 
+        Event event = new Event();
+        System.out.println("--------" + event + "--------");
       for(Country country : countries)
       {
           System.out.println("=== 国家: " + country.getCountryName() + " ===");
