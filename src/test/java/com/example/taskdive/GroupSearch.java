@@ -8,23 +8,15 @@ import java.util.*;
 // 数组是不能用 path 寻找的
 
 public class GroupSearch {
-    public static void main(String[] args){
+    public static void SearchFor(List<Disciplines>Discipline){
         ObjectMapper mapper = new ObjectMapper();
-        List<Disciplines>Discipline = new ArrayList<>();
 
-        System.out.println("Men's 10m Synchronised\nMixed 3m & 10m Team\nMen's 3m Synchronised\nWomen's 10m Synchronised, Women's 3m Synchronised");
-        System.out.print("Please enter the Discipline Name: ");
-
-        Scanner inputs = new Scanner(System.in);
-        String SearchName = inputs.nextLine();
-        SearchName = SearchName.toLowerCase();
-        SearchName = ProjectMatcher.matchDiscipline(SearchName);
-
-      for(File file : new File("Athlete&Contest/Contest/Group").listFiles())
+      for(File file : Objects.requireNonNull(new File("Athlete&Contest/Contest/Group").listFiles()))
         {
             try{
                 Disciplines parts = mapper.readValue(file, Disciplines.class);
-                if(parts.getDisciplineName().equals(SearchName)) {
+
+                {
                     List<Phase> Phases = new ArrayList<>();
                     parts.setPhases(Phases);
 
@@ -69,9 +61,6 @@ public class GroupSearch {
             catch (Exception e){
                 e.printStackTrace();
             }
-        }
-        for(Disciplines disciplines : Discipline){
-           OutputClass.OutputDisciplines(disciplines);
         }
     }
 }

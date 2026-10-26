@@ -6,7 +6,7 @@ public class OutputClass {
     {
         String sex = (athlete.getGender() == 0) ? "Male" : "Female";
         athlete.setCountryName((athlete.getCountryName()  == null) ?
-                Athlete.CountryMap.get(athlete.getCountryCode()) : athlete.getCountryName());
+                athlete.getCountryNameFromCode(athlete.getCountryCode()) : athlete.getCountryName());
         System.out.println("Full Name: " + athlete.getPreferredLastName() + " " + athlete.getPreferredFirstName());
         System.out.println("Gender: " + sex);
         System.out.println("Country: " + athlete.getCountryName());

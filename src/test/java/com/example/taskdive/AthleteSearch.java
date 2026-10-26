@@ -6,29 +6,34 @@ import java.util.*;
 
 
 public class AthleteSearch {
-    public static void main(String[] args) throws IOException
+    public static void SearchFor()
     {
         ObjectMapper mapper = new ObjectMapper();
 
-        List<Country> countries = OrderClass.CountryOrder(mapper.readValue(
-                new File("Athlete&Contest/Athlete/athletes.json"),
-                new TypeReference<>() {
-                }
-        ));
+        try {
 
-        Event event = new Event();
-        System.out.println("--------" + event + "--------");
-      for(Country country : countries)
-      {
-          System.out.println("=== 国家: " + country.getCountryName() + " ===");
-          if (country.getParticipations() != null) {
-              country.setParticipations(OrderClass.AthleteOrder(country.getParticipations()));
-              for (Athlete athlete : country.getParticipations()) {
-                  athlete.setCountryName(country.getCountryName());
-                  athlete.setCountryCode(country.getCountryCode());
-                  OutputClass.OutputAthlete(athlete);
-              }
-          }
-      }
+            List<Country> countries = OrderClass.CountryOrder(mapper.readValue(
+                    new File("Athlete&Contest/Athlete/athletes.json"),
+                    new TypeReference<>() {
+                    }
+            ));
+
+            Event event = new Event();
+            System.out.println("--------" + event + "--------");
+            for (Country country : countries) {
+                System.out.println("=== 国家: " + country.getCountryName() + " ===");
+                if (country.getParticipations() != null) {
+                    country.setParticipations(OrderClass.AthleteOrder(country.getParticipations()));
+                    for (Athlete athlete : country.getParticipations()) {
+                        athlete.setCountryName(country.getCountryName());
+                        athlete.setCountryCode(country.getCountryCode());
+                        OutputClass.OutputAthlete(athlete);
+                    }
+                }
+            }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

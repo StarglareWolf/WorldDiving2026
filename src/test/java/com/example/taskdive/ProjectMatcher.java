@@ -4,7 +4,8 @@ import org.apache.commons.text.similarity.JaroWinklerSimilarity;
 import java.util.*;
 
 public class ProjectMatcher {
-    private static List<String>VALID_PROJECTS = Arrays.asList(
+    private static final List<String>VALID_PROJECTS = Arrays.asList(
+            "athlete",
             "Men's 10m Platform",
             "Men's 3m Springboard",
             "Women's 10m Platform",
@@ -16,7 +17,12 @@ public class ProjectMatcher {
             "Women's 3m Synchronised"
     );
 
+    public static String getProjectName(int index){
+        return VALID_PROJECTS.get(index);
+    }
+
     public static String matchDiscipline(String SearchName) {
+
         String ContrastSearchName = SearchName.toLowerCase().replace(" ", "");
         JaroWinklerSimilarity distance = new JaroWinklerSimilarity();
 
@@ -31,9 +37,6 @@ public class ProjectMatcher {
             }
         }
 
-        // 记得删掉
-//        System.out.println(goalInput);
-//        System.out.println(maxSimilarity);
 
         if (maxSimilarity > 0.75 && maxSimilarity < 0.95){
             System.out.println("Did you mean -- " + goalInput + " ?");
@@ -44,7 +47,7 @@ public class ProjectMatcher {
             return goalInput;
         }
         else {
-            System.out.println("No such Discipline! ");
+            System.out.println("Error");
             return null;
         }
     }

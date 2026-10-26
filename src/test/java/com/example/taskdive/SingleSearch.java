@@ -6,20 +6,11 @@ import java.io.*;
 import java.util.*;
 
 public class SingleSearch {
-    public static void main(String[] args)
+    public static void SearchFor(List<Disciplines> Discipline)
     {
         ObjectMapper mapper = new ObjectMapper();
-        List<Disciplines>Discipline = new ArrayList<>();
 
-        System.out.println("Men's 10m Platform\nMen's 3m Springboard" +
-                "\nWomen's 10m Platform\nWomen's 3m Springboard");
-        System.out.print("Please enter the Discipline Name: ");
-        Scanner input = new Scanner(System.in);
-        String SearchName = input.nextLine();
-
-        SearchName = ProjectMatcher.matchDiscipline(SearchName);
-
-        for(File file : new File("Athlete&Contest/Contest/Single").listFiles())   //遍历所有文件数据
+        for(File file : Objects.requireNonNull(new File("Athlete&Contest/Contest/Single").listFiles()))   //遍历所有文件数据
         {
             List<Phase>Phases = new ArrayList<>();
             try {
@@ -29,7 +20,7 @@ public class SingleSearch {
                 );
                 JsonNode root = mapper.readTree(file);
 
-                if(parts.getDisciplineName().equals(SearchName))
+
                 {
                     parts.setPhases(Phases);                                    // 赛事的各个阶段
 
@@ -72,12 +63,6 @@ public class SingleSearch {
             catch (Exception e) {
                 e.printStackTrace();
             }
-
-        }
-
-        for(Disciplines disciplines : Discipline)                   //打印数据
-        {
-            OutputClass.OutputDisciplines(disciplines);
         }
     }
 }

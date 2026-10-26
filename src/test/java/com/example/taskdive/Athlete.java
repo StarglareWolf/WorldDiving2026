@@ -7,7 +7,7 @@ import com.fasterxml.jackson.annotation.JsonAlias;            // 不同文件对
 // 运动员属性方法
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Athlete {
-    public static Map<String,String> CountryMap = Map.ofEntries(
+    private static final Map<String,String> CountryMap = Map.ofEntries(
             Map.entry("COL", "Colombia"),
             Map.entry("MEX", "Mexico"),
             Map.entry("USA", "United States of America"),
@@ -49,6 +49,10 @@ public class Athlete {
     public Athlete(){}
     public String getCountryName() { return CountryName; }
     public void setCountryName(String countryName) { this.CountryName = countryName; }
+
+    public String getCountryNameFromCode(String countryCode){
+        return CountryMap.get(countryCode);
+    }
 
     public String getCountryCode() { return CountryCode; }
     public void setCountryCode(String countryCode) { this.CountryCode = countryCode; }
