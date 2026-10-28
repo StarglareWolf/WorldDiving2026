@@ -19,9 +19,11 @@ repositories {
 }
 
 dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter-params:5.9.2' // 参数化测试
     implementation 'org.apache.commons:commons-text:1.10.0' // 依赖：猜你想搜
-    implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
-    implementation 'com.alibaba:fastjson:1.2.83'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.22.4'
+    implementation 'com.alibaba:fastjson:1.2.83_noneautotype'
     implementation 'org.springframework.boot:spring-boot-starter'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
@@ -29,4 +31,12 @@ dependencies {
 
 tasks.named('test') {
     useJUnitPlatform()
+}
+
+bootJar{
+    mainClass = 'com.example.taskdive.DWASearch'
+}
+
+bootJar{
+    archiveFileName = "DWASearch.jar"
 }

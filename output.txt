@@ -1,0 +1,123 @@
+------------DisciplineName: Men's 10m Synchronised------------
+Phase: Finals
+----
+Rank: 1
+Full Name: ZHAO Renjie
+Gender: Male
+Country: People's Republic of China
+----
+Full Name: YANG Zhihao
+Gender: Male
+Country: People's Republic of China
+----
+DivePoints: 57.00 + 49.80 + 87.36 + 91.80 + 66.60 + 96.12 = 448.68
+###########
+Rank: 2
+Full Name: HRYTSENKO Mark
+Gender: Male
+Country: Ukraine
+----
+Full Name: SEREDA Oleksii
+Gender: Male
+Country: Ukraine
+----
+DivePoints: 49.20 + 48.00 + 75.84 + 79.92 + 71.40 + 79.92 = 404.28
+###########
+Rank: 3
+Full Name: BERLIN REYES Kevin
+Gender: Male
+Country: Mexico
+----
+Full Name: WILLARS VALDEZ Randal
+Gender: Male
+Country: Mexico
+----
+DivePoints: 50.40 + 47.40 + 76.50 + 81.00 + 71.04 + 76.68 = 403.02
+###########
+Rank: 4
+Full Name: MCCABE Euan
+Gender: Male
+Country: Great Britain
+----
+Full Name: CUTMORE Ben
+Gender: Male
+Country: Great Britain
+----
+DivePoints: 45.60 + 48.00 + 73.44 + 74.52 + 68.82 + 66.96 = 377.34
+###########
+Rank: 5
+Full Name: CULLEN Matt
+Gender: Male
+Country: Canada
+----
+Full Name: TESSIER Benjamin
+Gender: Male
+Country: Canada
+----
+DivePoints: 51.00 + 48.60 + 71.40 + 84.24 + 51.06 + 69.12 = 375.42
+###########
+Rank: 6
+Full Name: GIOVANNINI Riccardo
+Gender: Male
+Country: Italy
+----
+Full Name: CONTE Simone
+Gender: Male
+Country: Italy
+----
+DivePoints: 49.20 + 47.40 + 72.00 + 73.26 + 68.40 + 60.48 = 370.74
+###########
+Rank: 7
+Full Name: MERCIECA Jonah
+Gender: Male
+Country: Australia
+----
+Full Name: ROUSSEAU Cassiel
+Gender: Male
+Country: Australia
+----
+DivePoints: 47.40 + 47.40 + 71.04 + 75.84 + 65.28 + 61.05 = 368.01
+###########
+Rank: 8
+Full Name: SHLEIKHER Nikita
+Gender: Male
+Country: Russia
+----
+Full Name: TERNOVOI Ruslan
+Gender: Male
+Country: Russia
+----
+DivePoints: 48.60 + 50.40 + 57.12 + 51.84 + 69.93 + 76.68 = 354.57
+###########
+Do not match any task, Error!
+------------DisciplineName: Women's 3m Springboard------------
+Phase: Finals
+----
+Rank: 1
+Full Name: CHEN Jia
+Gender: Female
+Country: People's Republic of China
+----
+DivePoints: 73.50 + 74.40 + 76.50 + 72.00 + 78.00 = 374.40
+###########
+Rank: 2
+Full Name: CHEN Yiwen
+Gender: Female
+Country: People's Republic of China
+----
+DivePoints: 69.00 + 72.00 + 76.50 + 79.05 + 76.50 = 373.05
+###########
+Rank: 3
+Full Name: KEENEY Maddison
+Gender: Female
+Country: Australia
+----
+DivePoints: 66.00 + 49.50 + 67.50 + 74.40 + 81.60 = 339.00
+###########
+Rank: 4
+Full Name: KOLOI Alysha
+Gender: Female
+Country: Australia
+----
+DivePoints: 67.50 + 65.10 + 40.50 + 58.50 + 63.00 = 294.60
+###########

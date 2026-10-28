@@ -5,7 +5,7 @@ import java.util.*;
 
 public class ProjectMatcher {
     private static final List<String>VALID_PROJECTS = Arrays.asList(
-            "athlete",
+            "players",
             "Men's 10m Platform",
             "Men's 3m Springboard",
             "Women's 10m Platform",
@@ -23,14 +23,17 @@ public class ProjectMatcher {
 
     public static String matchDiscipline(String SearchName) {
 
-        String ContrastSearchName = SearchName.toLowerCase().replace(" ", "");
+        String ContrastSearchName = SearchName.toLowerCase().replace(" ", "").replace("'s", "");
         JaroWinklerSimilarity distance = new JaroWinklerSimilarity();
 
         double maxSimilarity = 0.0d;
         String goalInput = null;
         for (String project : VALID_PROJECTS){
-            String ContrastProject = project.toLowerCase().replace(" ", "");
-            double similarity = distance.apply(ContrastSearchName, ContrastProject);
+            String ContrastProject = project.toLowerCase().replace(" ", "").replace("'s", "");
+            double similarity = distance.apply(ContrastSearchName, "result" + ContrastProject);
+            if (ContrastProject.equals(VALID_PROJECTS.getFirst())) {
+                similarity = distance.apply(ContrastSearchName, ContrastProject);
+            }
             if (similarity > maxSimilarity){
                 maxSimilarity = similarity;
                 goalInput = project;
@@ -47,7 +50,7 @@ public class ProjectMatcher {
             return goalInput;
         }
         else {
-            System.out.println("Error");
+            System.out.println("Do not match any task, Error!\n-----");
             return null;
         }
     }

@@ -1,9 +1,9 @@
 package com.example.taskdive;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.util.*;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import com.fasterxml.jackson.annotation.JsonProperty;          // 用来将相应属性连接到相应键
-import com.fasterxml.jackson.annotation.JsonAlias;
+
 
 // 运动员参与赛事
 @JsonIgnoreProperties(ignoreUnknown = true)

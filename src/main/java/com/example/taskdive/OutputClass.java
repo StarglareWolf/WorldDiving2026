@@ -40,10 +40,12 @@ public class OutputClass {
 
     public static void OutputPhase(Phase phase)
     {
-        System.out.println("Phase: " + phase.getPhaseName());
-        for(RankPoint point: phase.getRankPoint())
-        {
-           OutputRankPoint(point);
+        if (phase.getPhaseName().equals("Final") || phase.getPhaseName().equals("Finals")) {
+            System.out.println("Phase: " + phase.getPhaseName());
+            System.out.println("----");
+            for (RankPoint point : phase.getRankPoint()) {
+                OutputRankPoint(point);
+            }
         }
     }
 

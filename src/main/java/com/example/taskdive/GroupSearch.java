@@ -1,7 +1,7 @@
 package com.example.taskdive;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.core.type.TypeReference;
+
 import java.io.*;
 import java.util.*;
 
@@ -11,8 +11,11 @@ public class GroupSearch {
     public static void SearchFor(List<Disciplines>Discipline){
         ObjectMapper mapper = new ObjectMapper();
 
-      for(File file : Objects.requireNonNull(new File("Athlete&Contest/Contest/Group").listFiles()))
+
+      Map<String, String> fileMap = DataUtil.readFiles("Athlete_Contest/Contest/Group");
+      for(Map.Entry<String, String> entry : fileMap.entrySet())
         {
+            String file = entry.getValue();
             try{
                 Disciplines parts = mapper.readValue(file, Disciplines.class);
 
@@ -59,6 +62,7 @@ public class GroupSearch {
 
             }
             catch (Exception e){
+                System.err.println("解析 JSON 文件失败!");
                 e.printStackTrace();
             }
         }

@@ -10,8 +10,10 @@ public class SingleSearch {
     {
         ObjectMapper mapper = new ObjectMapper();
 
-        for(File file : Objects.requireNonNull(new File("Athlete&Contest/Contest/Single").listFiles()))   //遍历所有文件数据
+        Map<String, String>fileMap = DataUtil.readFiles("Athlete_Contest/Contest/Single");
+        for(Map.Entry<String, String> entry : fileMap.entrySet())   //遍历所有文件数据
         {
+            String file = entry.getValue();
             List<Phase>Phases = new ArrayList<>();
             try {
                 Disciplines parts = mapper.readValue(file,
@@ -61,6 +63,7 @@ public class SingleSearch {
                 }
                }
             catch (Exception e) {
+                System.err.println("解析 JSON 文件失败!");
                 e.printStackTrace();
             }
         }
