@@ -8,6 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class JsonErrorTest {
 
+    // 测试文件问题
     @Test
     public void testCorruptedJsonThrowsException(){
         String badJson = "{\"CountryName\" : \"Full Name\",……broken";

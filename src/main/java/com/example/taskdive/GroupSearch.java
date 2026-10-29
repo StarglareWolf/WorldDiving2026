@@ -11,7 +11,7 @@ public class GroupSearch {
     public static void SearchFor(List<Disciplines>Discipline){
         ObjectMapper mapper = new ObjectMapper();
 
-
+      // 重构数据读取方法
       Map<String, String> fileMap = DataUtil.readFiles("Athlete_Contest/Contest/Group");
       for(Map.Entry<String, String> entry : fileMap.entrySet())
         {

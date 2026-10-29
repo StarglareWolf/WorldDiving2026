@@ -9,7 +9,7 @@ public class SingleSearch {
     public static void SearchFor(List<Disciplines> Discipline)
     {
         ObjectMapper mapper = new ObjectMapper();
-
+        // 重构读取数据方法
         Map<String, String>fileMap = DataUtil.readFiles("Athlete_Contest/Contest/Single");
         for(Map.Entry<String, String> entry : fileMap.entrySet())   //遍历所有文件数据
         {

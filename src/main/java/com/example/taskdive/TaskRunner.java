@@ -40,7 +40,7 @@ public class TaskRunner {
                 // 预先装入数据
                 GroupSearch.SearchFor(Discipline);
                 SingleSearch.SearchFor(Discipline);
-
+// 用于提示用户有哪些项目可查询，如果不需要可以直接删掉或者已经注释掉了
 //                System.out.println("players\nDiscipline:");
 //                System.out.println("""
 //                        Men's 10m Platform

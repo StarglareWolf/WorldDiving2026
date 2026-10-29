@@ -2,6 +2,7 @@ package com.example.taskdive;
 
 public class OutputClass {
 
+    // 运动员输出
     public static void OutputAthlete(Athlete athlete)
     {
         String sex = (athlete.getGender() == 0) ? "Male" : "Female";
@@ -13,6 +14,7 @@ public class OutputClass {
         System.out.println("----");
     }
 
+    //排名、成绩输出
     public static void OutputRankPoint(RankPoint rankPoint)
     {
         System.out.println("Rank: " + rankPoint.getDiveRank());
@@ -38,6 +40,7 @@ public class OutputClass {
         System.out.println("###########");
     }
 
+    // 赛事阶段输出
     public static void OutputPhase(Phase phase)
     {
         if (phase.getPhaseName().equals("Final") || phase.getPhaseName().equals("Finals")) {
@@ -49,6 +52,7 @@ public class OutputClass {
         }
     }
 
+    // 赛事输出
     public static void OutputDisciplines(Disciplines disciplines)
     {
         System.out.println("------------DisciplineName: " + disciplines.getDisciplineName() + "------------");
